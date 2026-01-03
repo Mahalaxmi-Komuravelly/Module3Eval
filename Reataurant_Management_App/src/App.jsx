@@ -4,11 +4,13 @@ import Login from './pages/Login'
 import AdminDashboard from './pages/AdminDashboard'
 import CustomerDashboard from './pages/CustomerDashboard'
 import ProtectedRoute from './components/ProtectedRoute'
+import { RestaurantProvider } from './context/RestaurantContext'
 
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <RestaurantProvider>
+        <BrowserRouter>
       <Routes>
         <Route path='/' element={<Navigate to="/login"/>}/>
         <Route path='/login' element={<Login/>}/>
@@ -27,6 +29,7 @@ const App = () => {
         }/> */}
       </Routes>
       </BrowserRouter>
+      </RestaurantProvider>
     </div>
   )
 }
