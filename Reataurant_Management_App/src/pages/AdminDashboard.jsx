@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { RestaurantContext } from '../context/RestaurantContext'
+import Dashboard from '../components/Dashboard';
 
 const AdminDashboard = () => {
 const {restuarants,addRes} = useContext(RestaurantContext);
@@ -59,6 +60,7 @@ const handleSubmit = ()=>{
                 <button type='submit'>Add</button>
             </form>
       </div>
+      <Dashboard/>
     </div>
   )
 }
