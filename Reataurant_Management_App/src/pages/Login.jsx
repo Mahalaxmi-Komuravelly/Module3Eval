@@ -13,11 +13,16 @@ const Login = () => {
             alert("Invalid email");
             return;
         }
-        if(password.trim.length < 6){
+        if(password.trim().length < 6){
             alert("Invalid password");
             return;
         }
-        
+        if(email === "admin@gmail.com" && password === "admin1234"){
+            navigate("/admin/dashboard");
+        }
+        if(email === "customer@gmail.com" && password === "customer1234"){
+            navigate("/customers/dashboard")
+        }
     }
 
 
