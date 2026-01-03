@@ -18,10 +18,14 @@ const Login = () => {
             return;
         }
         if(email === "admin@gmail.com" && password === "admin1234"){
+            // alert("Login Successful");
+            // localStorage.setItem("adminLogin",JSON.stringify(true));
             navigate("/admin/dashboard");
         }
         if(email === "customer@gmail.com" && password === "customer1234"){
-            navigate("/customers/dashboard")
+            // localStorage.setItem("customerLogin",JSON.stringify(true));
+            // alert("Login Successful");
+            navigate("/customers/dashboard");
         }
     }
 
